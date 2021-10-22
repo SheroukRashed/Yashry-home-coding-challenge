@@ -5,10 +5,13 @@
  * by creating objects of model Cart , apply services and return 
  * results back to the view implementing MVC
  */
+
+// ----------------------------Comment To Run Testing For All------------------------------------
 require(__DIR__.'/../Model/Factory.php');
 require(__DIR__.'/../Model/ShippingFees/ShippingFeesFactory.php');
 require(__DIR__.'/../Model/Product/ProductFactory.php');
 require(__DIR__.'/../Model/Cart/CartFactory.php');
+// ----------------------------Comment To Run Testing For All------------------------------------
 require(__DIR__.'/../../config/dbJson.php');
 require(__DIR__.'/../../config/constants.php');
 require(__DIR__.'/../Service/Discount/Contract/DiscountContractInterface.php');

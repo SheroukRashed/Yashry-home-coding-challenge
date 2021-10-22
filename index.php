@@ -1,9 +1,11 @@
 <?php
 
+// ----------------------------Comment To Run Testing For All------------------------------------
 require(__DIR__.'/src/Controller/CartController.php');
 require(__DIR__.'/src/Exception/UndefinedInputException.php');
 require(__DIR__.'/src/Exception/NonexistingProductException.php');
 require(__DIR__.'/src/Exception/WrongCommandFormatException.php');
+// ----------------------------Comment To Run Testing For All------------------------------------
 
 
 function start () {

@@ -33,16 +33,16 @@ class StrategyA implements DiscountContractInterface {
         }
         $feesAfterDiscount = $fees - $feesToBeDiscounted;
 
-        if( $feesAfterDiscount != $fees ){
-            $this->cart->setReceiptDetails(__DISCOUNT_TEXT__);
-        }
-
         $this->updateReceiptDetails( $fees , $feesAfterDiscount , $feesToBeDiscounted);
         return $feesAfterDiscount;
     }
 
     public function updateReceiptDetails( $fees , $feesAfterDiscount , $feesToBeDiscounted) {
 
+        if( $feesAfterDiscount != $fees && !in_array(__DISCOUNT_TEXT__,$this->cart->getReceiptDetails())){
+            $this->cart->setReceiptDetails(__DISCOUNT_TEXT__);
+        }
+        
         if( $feesAfterDiscount != $fees ){
             $this->cart->setReceiptDetails("\t".$this->receiptText.'-'.__CURRUNCY__.$feesToBeDiscounted);
         }

@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 
+// ----------------------------Comment To Run Testing For All------------------------------------
 require 'src/Service/Discount/Contract/DiscountContractInterface.php';
 require 'src/Service/Discount/Provider/StrategyA.php';
 require 'src/Service/Discount/Provider/StrategyB.php';
@@ -12,6 +13,7 @@ require 'src/Model/Cart/CartFactory.php';
 require 'src/Model/ShippingFees/ShippingFeesFactory.php';
 require 'src/Model/Product/ProductFactory.php';
 require 'config/constants.php';
+// ----------------------------Comment To Run Testing For All------------------------------------
 
 class StrategyATest extends TestCase {
 
