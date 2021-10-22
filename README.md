@@ -39,3 +39,20 @@ then the program would ask weather to continue or exit, then type
 after that you are required to add your product list, then you need to type a command looks like 
 ### createCart --product='T-shirt' --product='Blouse' --product='Pants' --product='Shoes' --product='Jacket'
 ----- In case you've entered a wrong command or non existing product the program print error to help you to correct your input. -----
+
+
+## How To Run The Test Cases
+In this program each module is run on a separate test suit , to run them use these comands
+#### ./vendor/bin/phpunit  --testsuite Controller
+#### ./vendor/bin/phpunit  --testsuite Model
+#### ./vendor/bin/phpunit  --testsuite Exception
+#### ./vendor/bin/phpunit  --testsuite Service
+#### ./vendor/bin/phpunit  --testsuite Index
+
+## Trade-offs you might have made, anything you left out, or what you might do differently if you were to spend additional time on the project.
+
+Concerning the main program there is no left out.
+
+However concerning testing I am not sure if it fits your requirement to test each module at a time , but if you want to test all modules you can comment some require satements that are specified in index.php CartController.php and StrategyATest.php then run.
+#### ./vendor/bin/phpunit
+### To run the program again or any of the previous module testing statements you need to uncomment these require statements again.
